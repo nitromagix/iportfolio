@@ -1,12 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import './App.css';
-import Portfolio from './components/Portfolio';
+import "./App.css";
+import Portfolio from "./components/Portfolio";
+import Bar from "./components/navbar";
 
 function App() {
   return (
     <div className="App">
-      <h1>iportfolio</h1>
+      <Bar />
       <Portfolio />
     </div>
   );

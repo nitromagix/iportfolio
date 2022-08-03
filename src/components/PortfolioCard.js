@@ -7,9 +7,9 @@ function PortfolioCard(props) {
 
   return (
     <div>
-      <h3>{data.name}</h3>
+      <h5>{data.name}</h5>
       <img src={TempProjectImage} alt={data.name} />
-      <h4>Technology: {data.technology}</h4>
+      <p><strong>Tech:</strong>: {data.technology}</p>
       <p>{data.description}</p>
     </div>
   );

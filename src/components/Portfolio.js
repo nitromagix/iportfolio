@@ -18,7 +18,7 @@ function Portfolio(props) {
 
   return (
     <div className="portfolio">
-      <h1>Portfolio</h1>
+      <h3>Portfolio</h3>
       <div>{createCards()}</div>
     </div>
   );
