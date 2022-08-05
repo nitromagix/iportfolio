@@ -2,8 +2,9 @@
 
 import { Fragment } from "react";
 
-import PortfolioCard from './PortfolioCard';
+import PortfolioCard from "./PortfolioCard";
 import portfolioData from "../models/portfolio";
+import pencil from "../pencil.png";
 
 function Portfolio(props) {
   // const apiData = props.apiData;
@@ -17,8 +18,11 @@ function Portfolio(props) {
   };
 
   return (
-    <div className="portfolio">
-      <h3>Portfolio</h3>
+    <div className="module portfolio">
+      <h3>
+        <span>Portfolio</span>
+        <img className="edit" src={pencil} alt="edit" />
+      </h3>
       <div>{createCards()}</div>
     </div>
   );

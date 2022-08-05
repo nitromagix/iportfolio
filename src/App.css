@@ -2,23 +2,40 @@
   text-align: center;
 }
 
-.portfolio {
+.module {
+  width:100%;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 auto 50px;
+  /* border: 1px solid #aaaaaa; */
+  
 }
 
 .portfolio > div > div {
   display: inline-block;
   border: 1px solid #aaaaaa;
   border-radius: 3px;
-  max-width: 250px;
+  max-width: 200px;
   height: 100%;
   max-height: 400px;
   padding:10px;
   margin:10px
 }
 
+.portfolio > div > div:hover {
+  cursor: pointer;
+}
+
 .portfolio > div > div > img {
   width: 100%;
   margin: 0 auto;
+}
+
+.contact span {
+  font-size: 20px;
+}
+
+.edit {
+  width:20px;
+  height: 20px;
+  margin-left: 20px;
 }
