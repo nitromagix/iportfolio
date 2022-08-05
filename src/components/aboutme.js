@@ -1,8 +1,10 @@
 import Accordion from 'react-bootstrap/Accordion';
 import React from 'react';
+import Work from './components/buttons'
 
 function About() {
   return (
+    <Work>
     <Accordion>
       <Accordion.Item eventKey="0">
         <Accordion.Header>About Me</Accordion.Header>
@@ -59,18 +61,8 @@ function About() {
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
-
-    ul.addEventListener('click', (event) => {
-        if(event.target.tagName === 'BUTTON') {
-            const button = event.target;
-            const li = button.parentNode;
-            const ul = li.parentNode;
-            if(button.textContent === 'remove') {
-                ul.removeChild(li)
-            }
-        }
-    });
+    </Work>
   );
-}
+};
 
 export default About;
