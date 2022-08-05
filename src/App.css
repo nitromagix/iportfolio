@@ -5,7 +5,7 @@
 .module {
   width:100%;
   max-width: 900px;
-  margin: 0 auto 50px;
+  margin: 0 auto 100px;
   /* border: 1px solid #aaaaaa; */
   
 }
@@ -34,8 +34,32 @@
   font-size: 20px;
 }
 
-.edit {
+.editpencil {
+  cursor: pointer;
   width:20px;
   height: 20px;
   margin-left: 20px;
+}
+
+.editmodal {
+  display: inline-block;
+}
+
+.edit {
+  font-size: 18px;
+  width: 500px;
+}
+
+.editrow {
+  margin: 10px;
+}
+
+.edit label {
+  margin-right: 18px;
+}
+
+.edit input {
+  width: 75%;
+
+  vertical-align: middle;
 }

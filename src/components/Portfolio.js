@@ -21,7 +21,7 @@ function Portfolio(props) {
     <div className="module portfolio">
       <h3>
         <span>Portfolio</span>
-        <img className="edit" src={pencil} alt="edit" />
+        <img className="editpencil" src={pencil} alt="edit" />
       </h3>
       <div>{createCards()}</div>
     </div>
