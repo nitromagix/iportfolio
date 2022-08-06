@@ -1,22 +1,13 @@
 //
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 
+import { useDispatch, useSelector } from "react-redux";
 import EditModal from "./EditModal";
 import ContactEdit from "./ContactEdit";
 import { getContactData, setContactData } from "../app/contactSlice";
 
-// import contactData from "../models/contact";
-
 function Contact(props) {
   const contactData = useSelector(getContactData);
   const dispatch = useDispatch();
-
-  const [asdf, setAsdf] = useState(contactData);
-
-  useEffect(() => {
-    setAsdf(contactData);
-  }, [contactData]);
 
   function modalSave(e) {
     const email = e.target.email.value;
@@ -24,39 +15,43 @@ function Contact(props) {
     const instagram = e.target.instagram.value;
     const facebook = e.target.facebook.value;
     const github = e.target.github.value;
-    dispatch(setContactData({ email, phone, instagram, facebook, github }));
+    dispatch(
+      setContactData({
+        email: email,
+        phone: phone,
+        instagram: instagram,
+        facebook: facebook,
+        github: github,
+      })
+    );
+    console.log(contactData);
   }
 
   return (
-    <div className="module contact">
-      <h3>
-        <span>Contact</span>
-        <EditModal
-          title="Contact (edit)"
-          form={<ContactEdit />}
-          onSave={modalSave}
-        />
-      </h3>
-
+    <div id="contact" className="module contact">
+      <div>
+        <h1>Contact</h1>
+        <EditModal form={<ContactEdit />} onSave={modalSave} />
+      </div>
       <div>
         <span>Email: </span>
-        <span>{asdf.email}</span>
+        <span>{contactData.email}</span>
       </div>
       <div>
         <span>Phone: </span>
-        <span>{asdf.phone}</span>
+        <span>{contactData.phone}</span>
       </div>
       <div>
         <span>Instagram: </span>
-        <span>{asdf.instagram}</span>
+        <span>{contactData.instagram}</span>
       </div>
       <div>
         <span>Facebook: </span>
-        <span>{asdf.facebook}</span>
+        <span>{contactData.facebook}</span>
       </div>
       <div>
         <span>Github: </span>
-        <span>{asdf.github}</span>
+        <span>{contactData.github}</span>
       </div>
     </div>
   );

@@ -8,12 +8,12 @@ export default function Bar() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link href="home">Home</Nav.Link>
-                <Nav.Link href="about">About</Nav.Link>
-                <Nav.Link href="education">Education</Nav.Link>
-                <Nav.Link href="experience">Experience</Nav.Link>
-                <Nav.Link href="portfolio">Portfolio</Nav.Link>
-                <Nav.Link href="contact">Contact</Nav.Link>
+                <Nav.Link href="#home">Home</Nav.Link>
+                <Nav.Link href="#about">About</Nav.Link>
+                <Nav.Link href="#education">Education</Nav.Link>
+                <Nav.Link href="#experience">Experience</Nav.Link>
+                <Nav.Link href="#portfolio">Portfolio</Nav.Link>
+                <Nav.Link href="#contact">Contact</Nav.Link>
                 <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2">

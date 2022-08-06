@@ -3,8 +3,9 @@
 import { Fragment } from "react";
 
 import PortfolioCard from "./PortfolioCard";
+import EditModal from "./EditModal";
+import PortfolioEdit from "./PortfolioEdit";
 import portfolioData from "../models/portfolio";
-import pencil from "../pencil.png";
 
 function Portfolio(props) {
   // const apiData = props.apiData;
@@ -17,13 +18,15 @@ function Portfolio(props) {
     return <Fragment>{cards}</Fragment>;
   };
 
+  const modalSave = () => {};
+
   return (
-    <div className="module portfolio">
-      <h3>
-        <span>Portfolio</span>
-        <img className="editpencil" src={pencil} alt="edit" />
-      </h3>
-      <div>{createCards()}</div>
+    <div id="portfolio" className="module portfolio">
+      <div>
+        <h1>Portfolio</h1>
+        <EditModal form={<PortfolioEdit />} onSave={modalSave} />
+      </div>
+      <div className="cards">{createCards()}</div>
     </div>
   );
 }

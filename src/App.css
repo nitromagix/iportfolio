@@ -1,31 +1,37 @@
+h1, h3 {
+  display: inline-block;
+  font-weight: lighter;
+}
+
 .App {
   text-align: center;
 }
 
 .module {
-  width:100%;
+  width: 100%;
   max-width: 900px;
-  margin: 0 auto 100px;
-  /* border: 1px solid #aaaaaa; */
-  
+  margin: 0 auto;
+  padding: 50px 0 50px;
+  border-bottom: 1px solid #aaaaaa;
+
 }
 
-.portfolio > div > div {
+.cards > .card {
   display: inline-block;
   border: 1px solid #aaaaaa;
   border-radius: 3px;
   max-width: 200px;
   height: 100%;
   max-height: 400px;
-  padding:10px;
-  margin:10px
+  padding: 10px;
+  margin: 10px;
 }
 
-.portfolio > div > div:hover {
+.card:hover {
   cursor: pointer;
 }
 
-.portfolio > div > div > img {
+.card > img {
   width: 100%;
   margin: 0 auto;
 }
@@ -36,13 +42,16 @@
 
 .editpencil {
   cursor: pointer;
-  width:20px;
+  width: 20px;
   height: 20px;
-  margin-left: 20px;
+  margin-left: 40px;
+  margin-bottom: 3px;
 }
 
 .editmodal {
   display: inline-block;
+  vertical-align:text-bottom;
+
 }
 
 .edit {
@@ -50,8 +59,13 @@
   width: 500px;
 }
 
+.edit h1 {
+  color: red;
+}
+
 .editrow {
   margin: 10px;
+  line-height: 30px;
 }
 
 .edit label {
@@ -60,6 +74,9 @@
 
 .edit input {
   width: 75%;
-
   vertical-align: middle;
+}
+
+.textcenter {
+  text-align: center;
 }

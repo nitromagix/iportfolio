@@ -6,7 +6,7 @@ function PortfolioCard(props) {
   const data = props.data;
 
   return (
-    <div>
+    <div className="card">
       <h5>{data.name}</h5>
       <img src={TempProjectImage} alt={data.name} />
       <p><strong>Tech:</strong>: {data.technology}</p>
