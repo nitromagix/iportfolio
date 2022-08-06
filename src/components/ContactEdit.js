@@ -1,10 +1,8 @@
 //
 
-import { useSelector } from "react-redux";
-import { getContactData } from "../app/contactSlice";
-
-function ContactEdit() {
-  const contactData = useSelector(getContactData);
+function ContactEdit(props) {
+  const contactData = props.contactData;
+  
   return (
     <div className="edit">
       <h1>Contact (edit)</h1>
@@ -54,7 +52,7 @@ function ContactEdit() {
           defaultValue={contactData.github}
         />
       </div>
-      <div className="editrow"></div>
+      <hr/>
     </div>
   );
 }

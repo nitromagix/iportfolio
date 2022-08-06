@@ -30,7 +30,7 @@ function Contact(props) {
     <div id="contact" className="module contact">
       <div>
         <h1>Contact</h1>
-        <EditModal form={<ContactEdit />} onSave={modalSave} />
+        <EditModal form={<ContactEdit contactData={contactData}/>} onSave={modalSave} />
       </div>
       <div>
         <span>Email: </span>

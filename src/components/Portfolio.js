@@ -18,7 +18,7 @@ function Portfolio(props) {
     return <Fragment>{cards}</Fragment>;
   };
 
-  const modalSave = () => {};
+  const modalSave = (e) => {};
 
   return (
     <div id="portfolio" className="module portfolio">

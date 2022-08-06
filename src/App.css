@@ -40,18 +40,17 @@ h1, h3 {
   font-size: 20px;
 }
 
-.editpencil {
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-  margin-left: 40px;
-  margin-bottom: 3px;
-}
-
-.editmodal {
+.editmodalicon {
   display: inline-block;
   vertical-align:text-bottom;
+}
 
+.editmodalicon > img {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  margin-left: 40px;
+  margin-bottom: 2px;
 }
 
 .edit {
@@ -65,14 +64,13 @@ h1, h3 {
 
 .editrow {
   margin: 10px;
-  line-height: 30px;
 }
 
-.edit label {
+.editrow label {
   margin-right: 18px;
 }
 
-.edit input {
+.editrow input {
   width: 75%;
   vertical-align: middle;
 }

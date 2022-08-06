@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Modal from "react-modal";
-import pencil from "../edit_icon.png";
+import pencil from "../file_edit.png";
 
 Modal.setAppElement("#root");
 
@@ -35,8 +35,8 @@ function EditModal(props) {
   }
 
   return (
-    <div className="editmodal">
-      <img className="editpencil" src={pencil} alt="edit" onClick={openModal} />
+    <div className="editmodalicon">
+      <img src={pencil} alt="edit" onClick={openModal} />
       <Modal
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}
