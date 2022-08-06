@@ -8,6 +8,7 @@ function ContactEdit() {
   return (
     <div className="edit">
       <h1>Contact (edit)</h1>
+      <hr/>
       <div className="editrow">
         <label htmlFor="email">Email: </label>
         <input

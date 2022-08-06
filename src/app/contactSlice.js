@@ -16,11 +16,9 @@ export const contactSlice = createSlice({
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
     setContactData: (state, action) => {
-      console.log(action.payload);
       state.value = {
         ...action.payload,
       };
-      console.log(state);
     },
   },
 });

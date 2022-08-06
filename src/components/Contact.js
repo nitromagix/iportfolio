@@ -24,7 +24,6 @@ function Contact(props) {
         github: github,
       })
     );
-    console.log(contactData);
   }
 
   return (
