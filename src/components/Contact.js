@@ -10,18 +10,15 @@ function Contact(props) {
   const dispatch = useDispatch();
 
   function modalSave(e) {
-    const email = e.target.email.value;
-    const phone = e.target.phone.value;
-    const instagram = e.target.instagram.value;
-    const facebook = e.target.facebook.value;
-    const github = e.target.github.value;
+    const formData = e.target;
+
     dispatch(
       setContactData({
-        email: email,
-        phone: phone,
-        instagram: instagram,
-        facebook: facebook,
-        github: github,
+        email: formData.email.value,
+        phone: formData.phone.value,
+        instagram: formData.instagram.value,
+        linkedin: formData.linkedin.value,
+        github: formData.github.value,
       })
     );
   }
@@ -45,8 +42,8 @@ function Contact(props) {
         <span>{contactData.instagram}</span>
       </div>
       <div>
-        <span>Facebook: </span>
-        <span>{contactData.facebook}</span>
+        <span>LinkedIn: </span>
+        <span>{contactData.linkedin}</span>
       </div>
       <div>
         <span>Github: </span>

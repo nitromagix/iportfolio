@@ -46,22 +46,6 @@ const portfolio = [
       "https://s2.qwant.com/thumbr/474x474/4/3/632b36850747f31a794a058eee22323e72db6c36ef34c64ed8ea2088066a83/th.jpg?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.-FC8wxVPO1PQ8rWWvMjmwwHaHa%26pid%3DApi&q=0&b=1&p=0&a=0",
     url: "#",
   },
-  {
-    name: "Project 7",
-    description: "This is the description for Seventh project",
-    technology: "HTML, CSS, Javascript, Mongo",
-    image:
-      "https://s2.qwant.com/thumbr/474x474/4/3/632b36850747f31a794a058eee22323e72db6c36ef34c64ed8ea2088066a83/th.jpg?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.-FC8wxVPO1PQ8rWWvMjmwwHaHa%26pid%3DApi&q=0&b=1&p=0&a=0",
-    url: "#",
-  },
-  {
-    name: "Project 8",
-    description: "This is the description for Eighth project",
-    technology: "HTML, CSS, Javascript, Postgres",
-    image:
-      "https://s2.qwant.com/thumbr/474x474/4/3/632b36850747f31a794a058eee22323e72db6c36ef34c64ed8ea2088066a83/th.jpg?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.-FC8wxVPO1PQ8rWWvMjmwwHaHa%26pid%3DApi&q=0&b=1&p=0&a=0",
-    url: "#",
-  },
 ];
 
 export default portfolio;

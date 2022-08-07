@@ -12,7 +12,9 @@ const customStyles = {
   right: "auto",
   bottom: "auto",
   marginRight: "-50%",
+  width:"70%",
   transform: "translate(-50%, -50%)",
+
 };
 
 function EditModal(props) {

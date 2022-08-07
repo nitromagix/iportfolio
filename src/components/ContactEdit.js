@@ -35,12 +35,12 @@ function ContactEdit(props) {
         />
       </div>
       <div className="editrow">
-        <label htmlFor="facebook">Facebook: </label>
+        <label htmlFor="linkedin">LinkedIn: </label>
         <input
           type="text"
-          name="facebook"
-          id="facebook"
-          defaultValue={contactData.facebook}
+          name="linkedin"
+          id="facelinkedinbook"
+          defaultValue={contactData.linkedin}
         />
       </div>
       <div className="editrow">

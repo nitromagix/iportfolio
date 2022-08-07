@@ -5,7 +5,7 @@ const initialState = {
     email: "email data",
     phone: "phone data",
     instagram: "instagram data",
-    facebook: "facebook data",
+    linkedin: "linkedin data",
     github: "github data",
   },
 };
