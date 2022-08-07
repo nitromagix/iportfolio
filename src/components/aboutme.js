@@ -1,67 +1,49 @@
 import Accordion from 'react-bootstrap/Accordion';
-import React from 'react';
-import Work from './components/buttons'
+import { useDispatch, useSelector } from "react-redux";
+import EditModal from "./EditModal";
+import AboutmeEdit from "./aboutmeEdit";
+import { getAboutData, setAboutData } from "../app/aboutSlice"
 
-function About() {
+function About(props) {
+  const aboutmeData = useSelector(getAboutData);
+  const dispatch = useDispatch();
+
+    function modalSave(e) {
+      const formData = e.target;
+
+      dispatch(
+        setAboutData({
+          about: formData.about.value,
+          interests: formData.interests.value,
+          goals: formData.goals.value
+        })
+      );
+    }
+  
   return (
-    <Work>
+    <div id="aboutme" className='module about'>
+        <EditModal form={<AboutmeEdit aboutData={aboutmeData}/>} onSave={modalSave} />
     <Accordion>
       <Accordion.Item eventKey="0">
         <Accordion.Header>About Me</Accordion.Header>
         <Accordion.Body>
-          <ul id="buttonsList">
-            <li>
-                <p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.</span></p>
-                <button>Edit</button>
-                <button>Remove</button>
-            </li>
-          </ul>
+                <p><span>{aboutmeData.about}</span></p>
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="1">
         <Accordion.Header>Interests</Accordion.Header>
-        <Accordion.Body>
-        <ul id="buttonsList">
-            <li>
-                <p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.</span></p>
-                <button>Edit</button>
-                <button>Remove</button>
-            </li>
-          </ul>
+        <Accordion.Body>       
+                <p><span>{aboutmeData.interests}</span></p>                
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="2">
         <Accordion.Header>Goals</Accordion.Header>
-        <Accordion.Body>
-        <ul id="buttonsList">
-            <li>
-                <p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.</span></p>
-                <button>Edit</button>
-                <button>Remove</button>
-            </li>
-          </ul>
+        <Accordion.Body>      
+                <p><span>{aboutmeData.goals}</span></p>               
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
-    </Work>
+    </div>
   );
 };
 
