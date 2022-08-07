@@ -7,14 +7,18 @@ import pencil from "../file_edit.png";
 Modal.setAppElement("#root");
 
 const customStyles = {
-  top: "40%",
-  left: "50%",
-  right: "auto",
-  bottom: "auto",
-  marginRight: "-50%",
-  width:"70%",
-  transform: "translate(-50%, -50%)",
-
+  // top: "40%",
+  // left: "auto",
+  // right: "auto",
+  // bottom: "auto",
+  margin: "0 auto",
+  // marginRight: "-50%",
+  // width:"100%",
+  transform: "translate(0%, 0%)",
+  minWidth: "300px",
+  maxWidth: "500px",
+  minHeight: "400px",
+  height:"70vh"
 };
 
 function EditModal(props) {
@@ -37,7 +41,7 @@ function EditModal(props) {
   }
 
   return (
-    <div className="editmodalicon">
+    <div className="editmodalicon clearfix">
       <img src={pencil} alt="edit" onClick={openModal} />
       <Modal
         isOpen={modalIsOpen}

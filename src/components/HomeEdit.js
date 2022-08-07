@@ -8,9 +8,17 @@ function HomeEdit(props) {
   return (
     <div className="edit">
       <h1>Home (edit)</h1>
-      <hr/>
-      <p>edit form here</p>
-      <hr/>
+      <hr />
+      <div className="editrow">
+        <label htmlFor="introduction">Introduction: </label>
+        <input
+          type="text"
+          name="introduction"
+          id="introduction"
+          defaultValue={homeData.introduction}
+        />
+      </div>
+      <hr />
     </div>
   );
 }

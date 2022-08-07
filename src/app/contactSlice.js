@@ -1,7 +1,9 @@
+//
+
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  value: {
+  contactData: {
     email: "email data",
     phone: "phone data",
     instagram: "instagram data",
@@ -13,10 +15,9 @@ const initialState = {
 export const contactSlice = createSlice({
   name: "contact",
   initialState,
-  // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
     setContactData: (state, action) => {
-      state.value = {
+      state.contactData = {
         ...action.payload,
       };
     },
@@ -25,6 +26,6 @@ export const contactSlice = createSlice({
 
 export const { setContactData } = contactSlice.actions;
 
-export const getContactData = (state) => state.contact.value;
+export const getContactData = (state) => state.contact.contactData;
 
 export default contactSlice.reducer;
