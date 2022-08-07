@@ -7,18 +7,15 @@ import pencil from "../file_edit.png";
 Modal.setAppElement("#root");
 
 const customStyles = {
-  // top: "40%",
-  // left: "auto",
-  // right: "auto",
-  // bottom: "auto",
-  margin: "0 auto",
-  // marginRight: "-50%",
-  // width:"100%",
-  transform: "translate(0%, 0%)",
-  // minWidth: "300px",
-  // maxWidth: "500px",
-  // minHeight: "400px",
-  height:"70vh"
+  top: "40%",
+  left: "50%",
+  right: "auto",
+  bottom: "auto",
+  // margin: "0 auto",
+  marginRight: "-50%",
+
+  transform: "translate(-50%,-50%)",
+
 };
 
 function EditModal(props) {
