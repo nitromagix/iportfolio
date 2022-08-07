@@ -1,12 +1,12 @@
 //
 
-import { Fragment } from "react";
-import EditModal from "./EditModal";
+// import { Fragment } from "react";
+// import EditModal from "./EditModal";
 
 function Empty(props) {
-  const modalSave = (e) => {};
+  // const modalSave = (e) => {};
 
-  const temp = "";
+  // const temp = "";
 
   return (
     <div id="empty" className="module empty">

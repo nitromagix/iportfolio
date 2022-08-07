@@ -1,7 +1,7 @@
 //
 
 function PortfolioEdit(props) {
-  const portfolioData = props.portfolioData;
+  // const portfolioData = props.portfolioData;
   
   return (
     <div className="edit">

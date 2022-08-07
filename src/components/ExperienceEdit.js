@@ -1,7 +1,7 @@
 //
 
 function ExperienceEdit(props) {
-  const experienceData = props.experienceData;
+  // const experienceData = props.experienceData;
 
   return (
     <div className="edit">
