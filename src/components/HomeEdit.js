@@ -16,16 +16,25 @@ function HomeEdit(props) {
           name="introduction"
           id="introduction"
           defaultValue={homeData.introduction}
+          maxLength={50}
         />
       </div>
       <div className="editrow">
         <label htmlFor="description">Description: </label>
-        <input
+        <textarea
+          id="description"
+          name="description"
+          rows="3"
+          cols="35"
+          maxLength={200}
+          defaultValue={homeData.description}
+        ></textarea>
+        {/* <input
           type="text"
           name="description"
           id="description"
           defaultValue={homeData.description}
-        />
+        /> */}
       </div>
       <hr />
     </div>

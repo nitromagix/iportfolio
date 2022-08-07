@@ -51,7 +51,7 @@ h1 {
     "Lucida Sans", Arial, sans-serif;
   font-weight: bold;
   font-size: xx-large;
-  text-decoration:underline;
+  /* text-decoration:underline; */
   max-width:200px;
   color: #282e6c;
   padding:20px;
