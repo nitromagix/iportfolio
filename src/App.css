@@ -48,18 +48,18 @@ h1 {
 }
 
 .banner > div:first-child {
-  background-color:powderblue;
+  background-color:ivory;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-weight: bold;
   font-size: xx-large;
   text-decoration:underline;
-  max-width:195px;
+  max-width:200px;
   color: #282e6c;
   padding:20px;
-  border: 1px solid #282e6c;
+  border: 1px solid #aaaaaa;
   border-radius: 20px;
-  box-shadow:0.2em 0.2em 2em rgba(0,0,0,0.3);
+  box-shadow:0.2em 0.2em 1em rgba(0,0,0,0.4);
 }
 
 .cards > .card {
@@ -102,7 +102,14 @@ h1 {
   margin-right: 20px;
 }
 
+.modalContent{
+  /* display: inline-block; */
+  margin: 0 auto;
+  text-align: center;
+}
+
 .edit {
+
   font-size: 18px;
   width: 100%;
 }

@@ -1,14 +1,24 @@
-import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
-import modalReducer from './modalSlice';
-import contactReducer from './contactSlice';
-import homeReducer from './homeSlice';
+//
 
-export const store = configureStore({
-  reducer: {
-    counter: counterReducer,
-    modal: modalReducer,
-    home: homeReducer,
-    contact: contactReducer
+import { configureStore, applyMiddleware } from "@reduxjs/toolkit";
+import thunkMiddleware from "redux-thunk";
+import { composeWithDevTools } from "redux-devtools-extension";
+
+import counterReducer from "../features/counter/counterSlice";
+import modalReducer from "./modalSlice";
+import contactReducer from "./contactSlice";
+import homeReducer from "./homeSlice";
+
+const composedEnhancer = composeWithDevTools(applyMiddleware(thunkMiddleware));
+
+export const store = configureStore(
+  {
+    reducer: {
+      counter: counterReducer,
+      modal: modalReducer,
+      home: homeReducer,
+      contact: contactReducer,
+    },
   },
-});
+  composedEnhancer
+);

@@ -15,9 +15,9 @@ const customStyles = {
   // marginRight: "-50%",
   // width:"100%",
   transform: "translate(0%, 0%)",
-  minWidth: "300px",
-  maxWidth: "500px",
-  minHeight: "400px",
+  // minWidth: "300px",
+  // maxWidth: "500px",
+  // minHeight: "400px",
   height:"70vh"
 };
 
@@ -61,7 +61,7 @@ function EditModal(props) {
         }}
         contentLabel="Edit Modal"
       >
-        <div>
+        <div className="modalContent">
           <form onSubmit={modalSubmit}>
             {props.form}
             <div className="textcenter">
