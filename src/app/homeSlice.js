@@ -4,7 +4,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   homeData: {
-    introduction: "Welcome to YOUR custom portfolio site!",
+    introduction: "Welcome to YOUR portfolio site!",
+    description: "Customize this site and tell your unique story.",
   },
 };
 

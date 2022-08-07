@@ -17,6 +17,7 @@ function Home(props) {
     dispatch(
       setHomeData({
         introduction: formData.introduction.value,
+        description: formData.description.value,
       })
     );
   }
@@ -29,7 +30,12 @@ function Home(props) {
       <div className="banner">
         <div>{homeData.introduction}</div>
         <div>
-          <img src={man} alt="edit" />
+          <img src={man} alt="Man pointing" />
+        </div>
+        <div className="description">
+          <h2>
+            {homeData.description}
+          </h2>
         </div>
       </div>
     </div>

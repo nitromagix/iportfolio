@@ -18,6 +18,15 @@ function HomeEdit(props) {
           defaultValue={homeData.introduction}
         />
       </div>
+      <div className="editrow">
+        <label htmlFor="description">Description: </label>
+        <input
+          type="text"
+          name="description"
+          id="description"
+          defaultValue={homeData.description}
+        />
+      </div>
       <hr />
     </div>
   );
