@@ -9,7 +9,7 @@ function PortfolioCard(props) {
     <div className="card">
       <h5>{data.name}</h5>
       <img src={TempProjectImage} alt={data.name} />
-      <p><strong>Tech:</strong>: {data.tech}</p>
+      <p><strong>Tech</strong>: {data.tech}</p>
       <p>{data.description}</p>
     </div>
   );
