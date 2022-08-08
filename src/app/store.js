@@ -9,6 +9,8 @@ import modalReducer from "./modalSlice";
 import contactReducer from "./contactSlice";
 import homeReducer from "./homeSlice";
 import userReducer from "./userSlice";
+import experienceReducer from "./experienceSlice";
+import portfolioReducer from "./portfolioSlice";
 import { logger } from "./logger";
 
 const composedEnhancer = composeWithDevTools(applyMiddleware(thunkMiddleware));
@@ -21,6 +23,8 @@ export const store = configureStore(
       home: homeReducer,
       contact: contactReducer,
       user: userReducer,
+      experience: experienceReducer,
+      portfolio: portfolioReducer,
     },
     middleware: [logger],
   },

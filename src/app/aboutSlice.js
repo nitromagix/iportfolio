@@ -4,9 +4,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   aboutData: {
-    firstSection: "asdfasd asdf asdf asdfa sasdf asdasdfas dfas dasdf asdf asdf asdf  asdfasdf asasdfa sdfasdf as d fasdf sadas dasd asf asdfs",
-    secondSection: "second section data",
-    thirdSection: "third section data",
+    about: "",
+    interest: "",
+    goals: "",
   },
 };
 

@@ -4,11 +4,11 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   contactData: {
-    email: "martinprost@gmail.com",
-    phone: "424.209.8902",
-    instagram: "instagram data",
-    linkedin: "www.linkedin.com/in/martinprost",
-    github: "https://github.com/nitromagix",
+    email: "",
+    phone: "",
+    instagram: "",
+    linkedin: "",
+    github: "",
   },
 };
 

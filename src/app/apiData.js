@@ -3,6 +3,8 @@
 import { setContactData } from "./contactSlice";
 import { setHomeData } from "./homeSlice";
 import { setUserData } from "./userSlice";
+import { setExperienceData } from "./experienceSlice";
+import { setPortfolioData } from "./portfolioSlice";
 
 const API_URL = "http://localhost:3333/profiles/62f0547767da340acb25b9b2";
 
@@ -42,6 +44,10 @@ export const fetchDataThunk = async (dispatch, getState) => {
       description: responseJson.description,
     })
   );
+
+  dispatch(setExperienceData(responseJson.experience));
+
+  dispatch(setPortfolioData(responseJson.portfolio));
 
   dispatch(
     setContactData({
