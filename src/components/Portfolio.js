@@ -1,16 +1,21 @@
 //
 
 import { Fragment } from "react";
-
+import { useDispatch, useSelector } from "react-redux";
 import PortfolioCard from "./PortfolioCard";
 import EditModal from "./EditModal";
 import PortfolioEdit from "./PortfolioEdit";
-import portfolioData from "../models/portfolio";
+// import portfolioData from "../models/portfolio";
+
+import { getPortfolioData, setPortfolioData } from "../app/portfolioSlice";
 
 function Portfolio(props) {
-  // const apiData = props.apiData;
+  const portfolioData = useSelector(getPortfolioData);
+  const dispatch = useDispatch();
 
   const createCards = () => {
+
+    console.log(portfolioData)
     const cards = portfolioData.map((item, i) => (
       <PortfolioCard data={item} key={i} />
     ));
