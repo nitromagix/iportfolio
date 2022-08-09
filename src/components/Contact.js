@@ -3,7 +3,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import EditModal from "./EditModal";
 import ContactEdit from "./ContactEdit";
-import { getContactData, setContactData } from "../app/contactSlice";
+import { getContactData, updateContactDataThunk } from "../app/contactSlice";
 
 function Contact(props) {
   const contactData = useSelector(getContactData);
@@ -13,7 +13,7 @@ function Contact(props) {
     const formData = e.target;
 
     dispatch(
-      setContactData({
+      updateContactDataThunk({
         email: formData.email.value,
         phone: formData.phone.value,
         instagram: formData.instagram.value,
