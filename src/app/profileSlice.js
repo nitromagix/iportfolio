@@ -8,21 +8,21 @@ import { setPortfolioData } from "./portfolioSlice";
 
 const API_URL = "http://localhost:3333/profiles/62f0547767da340acb25b9b2";
 
-export const fetchData = () => {
-  const fetchDataThunk = async (dispatch, getState) => {
-    // let state = getState();
-    const response = await fetch(API_URL);
-    const responseJson = await response.json();
-    console.log(responseJson);
-    const homeData = {
-      introduction: responseJson.introduction,
-      description: responseJson.description,
-    };
-    console.log(homeData);
-    dispatch(setHomeData(homeData));
-  };
-  return fetchDataThunk;
-};
+// export const fetchData = () => {
+//   const fetchDataThunk = async (dispatch, getState) => {
+//     // let state = getState();
+//     const response = await fetch(API_URL);
+//     const responseJson = await response.json();
+//     console.log(responseJson);
+//     const homeData = {
+//       introduction: responseJson.introduction,
+//       description: responseJson.description,
+//     };
+//     console.log(homeData);
+//     dispatch(setHomeData(homeData));
+//   };
+//   return fetchDataThunk;
+// };
 
 export const fetchDataThunk = async (dispatch, getState) => {
   // let state = getState();

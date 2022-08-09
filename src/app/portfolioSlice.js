@@ -11,7 +11,7 @@ export const portfolioSlice = createSlice({
   initialState,
   reducers: {
     setPortfolioData: (state, action) => {
-      state.portfolioData = Object.values(action.payload);
+      state.portfolioData = action.payload;
     },
   },
 });

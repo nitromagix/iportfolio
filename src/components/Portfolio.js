@@ -15,7 +15,7 @@ function Portfolio(props) {
 
   const createCards = () => {
 
-    console.log(portfolioData)
+    // console.log(portfolioData)
     const cards = portfolioData.map((item, i) => (
       <PortfolioCard data={item} key={i} />
     ));

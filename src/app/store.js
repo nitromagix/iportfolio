@@ -25,7 +25,7 @@ export const store = configureStore(
       experience: experienceReducer,
       portfolio: portfolioReducer,
     },
-    middleware: [consoleLogger],
+    // middleware: [consoleLogger],
   },
   composedEnhancer
 );
