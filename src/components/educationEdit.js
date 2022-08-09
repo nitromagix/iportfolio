@@ -17,7 +17,7 @@ function EducationEdit(props) {
                 <label htmlFor="experience">Experience</label>
                 <input
                     type="text"
-                    id="education"
+                    id="experience"
                     defaultValue={educationData.experience}
                 />
             </div>
