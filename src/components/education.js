@@ -2,9 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import EditModal from "./EditModal"
 import EducationEdit from "./educationEdit"
 import { getEducationData, setEducationData } from "../app/educationSlice"
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import Stack from 'react-bootstrap/Stack';
 
 
 function Education(props) {
@@ -30,22 +28,18 @@ function Education(props) {
             <h1> Qualification</h1>
         <EditModal form={<EducationEdit educationData={educationData}/>} onSave={modalSave} />
             </div>
-            <Container>
             <div>
                 <header className=".App">Education </header>
-                <Row>
-                <Col><p><span>{educationData.education}</span></p></Col>
-                <Col><p><span>{educationData.education1}</span></p></Col>
-                </Row>
+                <Stack gap={0}>
+                <p><span>{educationData.education}</span></p>
+                <p><span>{educationData.education1}</span></p>
+                </Stack>
             </div>
             <div>
                 <header>Experience </header>
-                <Row>
-                <Col><p><span>{educationData.experience}</span></p></Col>
-                <Col><p><span>{educationData.experience1}</span></p></Col>
-                </Row>
+                <p><span>{educationData.experience}</span></p>
+                <p><span>{educationData.experience1}</span></p>
             </div>
-            </Container>
         </div>
     );
 };
