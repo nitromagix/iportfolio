@@ -1,8 +1,31 @@
-import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+//
 
-export const store = configureStore({
-  reducer: {
-    counter: counterReducer,
+import { configureStore, applyMiddleware } from "@reduxjs/toolkit";
+import thunkMiddleware from "redux-thunk";
+import { composeWithDevTools } from "redux-devtools-extension";
+
+import counterReducer from "../features/counter/counterSlice";
+import contactReducer from "./contactSlice";
+import homeReducer from "./homeSlice";
+import userReducer from "./userSlice";
+import experienceReducer from "./experienceSlice";
+import portfolioReducer from "./portfolioSlice";
+
+import { consoleLogger } from "./consoleLogger";
+
+const composedEnhancer = composeWithDevTools(applyMiddleware(thunkMiddleware));
+
+export const store = configureStore(
+  {
+    reducer: {
+      counter: counterReducer,
+      home: homeReducer,
+      contact: contactReducer,
+      user: userReducer,
+      experience: experienceReducer,
+      portfolio: portfolioReducer,
+    },
+    // middleware: [consoleLogger],
   },
-});
+  composedEnhancer
+);
