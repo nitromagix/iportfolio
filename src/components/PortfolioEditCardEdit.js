@@ -15,7 +15,7 @@ function PortfolioEditCardEdit(props) {
       >
         <div id={`id-${index}`} style={{display:"none"}}>{projectData._id}</div>
         <button
-          id={index}
+          id={`${index}cancel`}
           onClick={props.cancelClick}
           style={{ marginRight: "20px", float: "right" }}
           itemID={index}
@@ -23,8 +23,8 @@ function PortfolioEditCardEdit(props) {
           Cancel
         </button>
         <button
-          id={index}
-          onClick={props.cancelClick}
+          id={`${index}save`}
+          onClick={props.saveClick}
           style={{ marginRight: "20px", float: "right" }}
           itemID={index}
         >

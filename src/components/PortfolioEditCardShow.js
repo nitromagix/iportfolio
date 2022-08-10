@@ -1,7 +1,5 @@
 //
 
-import { Fragment } from "react";
-
 function PortfolioEditCardShow(props) {
   const projectData = props.projectData;
   const index = props.index;
@@ -9,7 +7,7 @@ function PortfolioEditCardShow(props) {
   return (
     <div className="clearfix" id={`${index}_show`} style={{width:"100%"}}>
       <button
-        id={index}
+        id={`${index}edit`}
         onClick={props.editClick}
         style={{ float: "right", marginRight: "20px" }}
         itemID={index}

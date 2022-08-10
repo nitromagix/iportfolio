@@ -74,6 +74,7 @@ h1 {
   padding: 10px;
   margin: 10px;
   box-shadow: 0.2em 0.2em 1em rgba(0, 0, 0, 0.2);
+  vertical-align: top;
 }
 
 .card:hover {
@@ -86,8 +87,9 @@ h1 {
   margin: 0 auto;
 }
 
-.card >p {
-  height:50px;
+.card >div {
+  height:150px;
+  width:250px;
 }
 
 .contact span {

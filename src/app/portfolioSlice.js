@@ -20,7 +20,7 @@ export const portfolioSlice = createSlice({
     },
     updateProjectData: (state, action) => {
       const editedProject = action.payload;
-      state.portfolioData.map((project, i) => {
+      state.portfolioData = state.portfolioData.map((project, i) => {
         console.log(project)
         return project._id === editedProject._id ? editedProject : project
         
