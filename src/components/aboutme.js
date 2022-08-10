@@ -22,6 +22,8 @@ function About(props) {
   
   return (
     <div id="aboutme" className='module about'>
+      <div>
+        <h1>Get to Know Me!</h1>
         <EditModal form={<AboutmeEdit aboutData={aboutmeData}/>} onSave={modalSave} />
     <Accordion>
       <Accordion.Item eventKey="0">
@@ -43,6 +45,7 @@ function About(props) {
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
+    </div>
     </div>
   );
 };

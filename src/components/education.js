@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+
 function Education(props) {
     const educationData = useSelector(getEducationData);
     const dispatch = useDispatch();
@@ -31,7 +32,7 @@ function Education(props) {
             </div>
             <Container>
             <div>
-                <header>Education </header>
+                <header className=".App">Education </header>
                 <Row>
                 <Col><p><span>{educationData.education}</span></p></Col>
                 <Col><p><span>{educationData.education1}</span></p></Col>
