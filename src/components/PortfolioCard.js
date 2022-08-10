@@ -16,10 +16,12 @@ function PortfolioCard(props) {
         }
         alt={projectData.name}
       />
-      <p>
-        <strong>Tech</strong>: {projectData.tech}
-      </p>
-      <p>{projectData.description}</p>
+      <div>
+        <p>
+          <strong>Tech</strong>: {projectData.tech}
+        </p>
+        <p>{projectData.description}</p>
+      </div>
     </div>
   );
 }

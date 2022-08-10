@@ -1,10 +1,9 @@
 //
 
-import { Fragment } from "react";
 import { useDispatch } from "react-redux";
 import PortfolioEditCardEdit from "./PortfolioEditCardEdit";
 import PortfolioEditCardShow from "./PortfolioEditCardShow";
-import { getPortfolioData, updatePortfolioDataThunk } from "../app/portfolioSlice";
+import { updatePortfolioDataThunk } from "../app/portfolioSlice";
 
 function PortfolioEdit(props) {
   const dispatch = useDispatch();
@@ -12,19 +11,25 @@ function PortfolioEdit(props) {
 
   const editClick = (e) => {
     e.preventDefault();
-    const index = e.target.id;
+    const index = e.target.id.charAt(0);
     showEdit(index, true);
   };
   const cancelClick = (e) => {
     e.preventDefault();
-    const index = e.target.id;
+    const index = e.target.id.charAt(0);
     showEdit(index, false);
   };
   const saveClick = (e) => {
     e.preventDefault();
-    const index = e.target.id;
+    const index = e.target.id.charAt(0);
+    
     const updatedProject = {
-      _id: document.getElementById(`id-${index}`).value
+      _id: document.getElementById(`id-${index}`).innerHTML,
+      name: document.getElementById(`name-${index}`).value,
+      description: document.getElementById(`description-${index}`).value,
+      tech: document.getElementById(`tech-${index}`).value,
+      url: document.getElementById(`url-${index}`).value,
+      imageUrl: document.getElementById(`imageUrl-${index}`).value,
     }
     console.log(updatedProject);
     dispatch(updatePortfolioDataThunk(updatedProject));
