@@ -1,4 +1,4 @@
-//
+
 
 import React, { useEffect } from "react";
 
@@ -8,7 +8,9 @@ import Contact from "./components/Contact";
 import Bar from "./components/navbar";
 import Experience from "./components/Experience";
 import Home from "./components/Home";
+import About from  './components/aboutme';
 import Empty from "./components/Empty";
+
 
 function App() {
 
@@ -16,6 +18,7 @@ function App() {
     <div className="App">
       <Bar />
       <Home />
+      <About />
       <Experience />
       <Portfolio />
       <Contact />
