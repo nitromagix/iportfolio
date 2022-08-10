@@ -12,6 +12,11 @@ function EducationEdit(props) {
                     id="education"
                     defaultValue={educationData.education}
                 />
+                <input
+                    type="text"
+                    id="education1"
+                    defaultValue={educationData.education1}
+                />
             </div>
             <div className="editrow">
                 <label htmlFor="experience">Experience</label>

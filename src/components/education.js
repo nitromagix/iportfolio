@@ -13,7 +13,8 @@ function Education(props) {
             dispatch(
                 setEducationData({
                     education: formData.education.value,
-                    experience: formData.experience.value
+                    education1: formData.education1.value,
+                    experience: formData.experience.value,
                 })
             );
         };
@@ -27,6 +28,7 @@ function Education(props) {
             <div>
                 <header>Education </header>
                 <p><span>{educationData.education}</span></p>
+                <p><span>{educationData.education1}</span></p>
             </div>
             <div>
                 <header>Experience </header>

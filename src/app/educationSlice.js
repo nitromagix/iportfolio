@@ -5,6 +5,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   educationData: {
     education: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+    education1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
     experience: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
   },
 };
