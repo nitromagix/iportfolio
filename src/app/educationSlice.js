@@ -7,6 +7,7 @@ const initialState = {
     education: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
     education1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
     experience: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+    experience1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
   },
 };
 

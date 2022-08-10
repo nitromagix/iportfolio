@@ -25,6 +25,11 @@ function EducationEdit(props) {
                     id="experience"
                     defaultValue={educationData.experience}
                 />
+                <input
+                    type="text"
+                    id="experience1"
+                    defaultValue={educationData.experience1}
+                />
             </div>
             <hr/>
         </div>
