@@ -7,6 +7,12 @@ h1 {
   font-variant: small-caps;
 }
 
+header{
+  border: 2px solid;
+  border-radius: 8px;
+  padding: 5px;
+}
+
 .App {
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
