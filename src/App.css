@@ -116,7 +116,7 @@ h1 {
 
 .edit {
 
-  font-size: 16px;
+  font-size: 14px;
   width: 400px;
 }
 
@@ -130,7 +130,7 @@ h1 {
 }
 
 .editrow label {
-  margin-right: 18px;
+  margin-right: 10px;
 }
 
 .editrow input {
@@ -140,6 +140,10 @@ h1 {
 
 .textcenter {
   text-align: center;
+}
+
+.verticaltop {
+  vertical-align: top;
 }
 
 .clearfix::after {

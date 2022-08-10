@@ -5,7 +5,7 @@ import EditModal from "./EditModal";
 import HomeEdit from "./HomeEdit";
 import man from "../man_pointing.png";
 import { useDispatch, useSelector } from "react-redux";
-import { getHomeData, setHomeData, updateHomeDataThunk } from "../app/homeSlice";
+import { getHomeData, updateHomeDataThunk } from "../app/homeSlice";
 
 function Home(props) {
   const homeData = useSelector(getHomeData);
@@ -14,12 +14,6 @@ function Home(props) {
   function modalSave(e) {
     const formData = e.target;
 
-    // dispatch(
-    //   setHomeData({
-    //     introduction: formData.introduction.value,
-    //     description: formData.description.value,
-    //   })
-    // );
     dispatch(updateHomeDataThunk({
       introduction: formData.introduction.value,
       description: formData.description.value,

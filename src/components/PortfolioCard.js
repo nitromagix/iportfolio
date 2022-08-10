@@ -3,23 +3,23 @@
 import TempProjectImage from "../test_project.jpg";
 
 function PortfolioCard(props) {
-  const data = props.data;
+  const projectData = props.projectData;
 
   return (
     <div className="card">
-      <h5>{data.name}</h5>
+      <h5>{projectData.name}</h5>
       <img
         src={
-          data.imageUrl && data.imageUrl !== ""
-            ? data.imageUrl
+          projectData.imageUrl && projectData.imageUrl !== ""
+            ? projectData.imageUrl
             : TempProjectImage
         }
-        alt={data.name}
+        alt={projectData.name}
       />
       <p>
-        <strong>Tech</strong>: {data.tech}
+        <strong>Tech</strong>: {projectData.tech}
       </p>
-      <p>{data.description}</p>
+      <p>{projectData.description}</p>
     </div>
   );
 }
