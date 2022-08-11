@@ -12,6 +12,8 @@ import API_URL from "./api";
 
 export const fetchDataThunk = async (dispatch, getState) => {
 
+  console.log(API_URL)
+
   // let state = getState();
   const response = await fetch(API_URL);
   const responseJson = await response.json();
