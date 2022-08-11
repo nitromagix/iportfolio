@@ -31,7 +31,7 @@ function PortfolioEdit(props) {
       url: document.getElementById(`url-${index}`).value,
       imageUrl: document.getElementById(`imageUrl-${index}`).value,
     }
-    console.log(updatedProject);
+
     dispatch(updatePortfolioDataThunk(updatedProject));
 
     showEdit(index, false);
