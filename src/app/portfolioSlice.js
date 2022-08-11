@@ -47,6 +47,8 @@ export const updatePortfolioDataThunk = (data) => {
       .then(async (response) => {
         const res = await response.json();
 
+        console.log(res);
+
         if (!response.ok) {
           const error = (res && res.message) || response.status;
           console.log(error);
@@ -71,7 +73,7 @@ export const addProjectDataThunk = (data) => {
       body: JSON.stringify(projectData),
     };
 
-    fetch(`${API_URL}project/`, requestOptions)
+    fetch(`${API_URL}/project/`, requestOptions)
       .then(async (response) => {
         const res = await response.json();
 
