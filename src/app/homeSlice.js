@@ -2,7 +2,7 @@
 
 import { createSlice } from "@reduxjs/toolkit";
 
-const API_URL = "http://localhost:3333/profiles/62f0547767da340acb25b9b2/";
+import API_URL from "./api";
 
 const initialState = {
   homeData: {

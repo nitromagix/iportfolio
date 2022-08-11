@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import EditModal from "./EditModal"
 import EducationEdit from "./educationEdit"
-import { getEducationData, setEducationData } from "../app/educationSlice"
+import { getEducationData, updateEducationDataThunk } from "../app/educationSlice"
 import Stack from 'react-bootstrap/Stack';
 
 
@@ -13,7 +13,7 @@ function Education(props) {
             const formData = e.target;
 
             dispatch(
-                setEducationData({
+              updateEducationDataThunk({
                     education: formData.education.value,
                     education1: formData.education1.value,
                     experience: formData.experience.value,
@@ -23,20 +23,20 @@ function Education(props) {
         };
 
     return (
-        <div id="education" className='module education'>
+        <div id="qualification" className='module education'>
             <div>
             <h1> Qualification</h1>
         <EditModal form={<EducationEdit educationData={educationData}/>} onSave={modalSave} />
             </div>
-            <div>
-                <header className=".App">Education </header>
+            <div style={{width:"90%", margin:"0 auto" }}>
+                <header className=".App" style={{backgroundColor:"ivory"}}>Education </header>
                 <Stack gap={0}>
                 <p><span>{educationData.education}</span></p>
                 <p><span>{educationData.education1}</span></p>
                 </Stack>
             </div>
-            <div>
-                <header>Experience </header>
+            <div style={{width:"90%", margin:"0 auto"}}>
+                <header style={{backgroundColor:"ivory"}}>Experience </header>
                 <p><span>{educationData.experience}</span></p>
                 <p><span>{educationData.experience1}</span></p>
             </div>

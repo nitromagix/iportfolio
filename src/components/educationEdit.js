@@ -6,29 +6,34 @@ function EducationEdit(props) {
             <h1> Education (edit)</h1>
             <hr/>
             <div className="editrow">
-                <label htmlFor="education">Education </label>
+                <label htmlFor="education">Education </label><br/>
                 <input
                     type="text"
                     id="education"
                     defaultValue={educationData.education}
-                />
+                /><br/><br/>
                 <input
                     type="text"
                     id="education1"
                     defaultValue={educationData.education1}
                 />
-            </div>
+            </div><br/><br/>
             <div className="editrow">
-                <label htmlFor="experience">Experience</label>
-                <input
+                <label htmlFor="experience">Experience</label><br/>
+                <textarea
                     type="text"
                     id="experience"
                     defaultValue={educationData.experience}
-                />
-                <input
+                    rows="3"
+                    cols="35"
+                    
+                /><br/><br/>
+                <textarea
                     type="text"
                     id="experience1"
                     defaultValue={educationData.experience1}
+                    rows="3"
+                    cols="35"
                 />
             </div>
             <hr/>
