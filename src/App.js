@@ -21,7 +21,6 @@ function App() {
       <Home />
       <About />
       <Education />
-      <Experience />
       <Portfolio />
       <Contact />
       <Empty />

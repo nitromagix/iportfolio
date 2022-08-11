@@ -2,7 +2,7 @@ import {Nav,Container,Navbar,NavDropdown} from 'react-bootstrap'
 
 export default function Bar() {
     return (
-        <Navbar bg="primary" varient="dark" expand="lg">
+        <Navbar bg="primary" varient="dark" expand="lg" >
           <Container>
             <Navbar.Brand href="/">iPortfolio</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />

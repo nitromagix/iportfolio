@@ -2,7 +2,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import { useDispatch, useSelector } from "react-redux";
 import EditModal from "./EditModal";
 import AboutmeEdit from "./aboutmeEdit";
-import { getAboutData, setAboutData } from "../app/aboutSlice"
+import { getAboutData, updateContactDataThunk } from "../app/aboutSlice"
 
 function About(props) {
   const aboutmeData = useSelector(getAboutData);
@@ -12,7 +12,7 @@ function About(props) {
       const formData = e.target;
 
       dispatch(
-        setAboutData({
+        updateContactDataThunk({
           about: formData.about.value,
           interests: formData.interests.value,
           goals: formData.goals.value
@@ -21,11 +21,11 @@ function About(props) {
     }
   
   return (
-    <div id="aboutme" className='module about'>
+    <div id="about" className='module about'>
       <div>
         <h1>Get to Know Me!</h1>
         <EditModal form={<AboutmeEdit aboutData={aboutmeData}/>} onSave={modalSave} />
-    <Accordion>
+    <Accordion defaultActiveKey={0} style={{width:"90%", margin:"0 auto"}}>
       <Accordion.Item eventKey="0">
         <Accordion.Header>About Me</Accordion.Header>
         <Accordion.Body>

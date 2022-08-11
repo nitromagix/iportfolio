@@ -2,12 +2,14 @@
 
 import { createSlice } from "@reduxjs/toolkit";
 
+const API_URL = "http://localhost:3333/profiles/62f0547767da340acb25b9b2/";
+
 const initialState = {
   aboutData: {
 
-    about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-    interests: "second section data",
-    goals: "third section data",
+    about: "",
+    interests: "",
+    goals: "",
 
   },
 };
@@ -27,6 +29,34 @@ export const aboutSlice = createSlice({
 export const { setAboutData } = aboutSlice.actions;
 
 export const getAboutData = (state) => state.about.aboutData;
+
+export const updateContactDataThunk = (data) => {
+  return async (dispatch, getState) => {
+    const aboutData = data;
+
+    const requestOptions = {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(aboutData),
+    };
+
+    fetch(API_URL, requestOptions)
+      .then(async (response) => {
+        const res = await response.json();
+
+        if (!response.ok) {
+          const error = (res && res.message) || response.status;
+          console.log(error);
+          return Promise.reject(error);
+        }
+
+        dispatch(setAboutData(aboutData));
+      })
+      .catch((error) => {
+        console.error("There was an error!", error);
+      });
+  };
+};
 
 export default aboutSlice.reducer;
 

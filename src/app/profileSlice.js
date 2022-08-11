@@ -5,6 +5,8 @@ import { setHomeData } from "./homeSlice";
 import { setUserData } from "./userSlice";
 import { setExperienceData } from "./experienceSlice";
 import { setPortfolioData } from "./portfolioSlice";
+import { setAboutData } from "./aboutSlice";
+import { setEducationData } from "./educationSlice";
 
 const API_URL = "http://localhost:3333/profiles/62f0547767da340acb25b9b2";
 
@@ -30,7 +32,20 @@ export const fetchDataThunk = async (dispatch, getState) => {
     })
   );
 
-  dispatch(setExperienceData(responseJson.experience));
+  dispatch(
+    setAboutData({
+      about: responseJson.about,
+      interests: responseJson.interests,
+      goals: responseJson.goals,
+    })
+  );
+
+  dispatch(setEducationData({
+    education: responseJson.education,
+    education1: responseJson.education1,
+    experience: responseJson.experience,
+    experience1: responseJson.experience1,
+  }));
 
   dispatch(setPortfolioData(responseJson.portfolio));
 

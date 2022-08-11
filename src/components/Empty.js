@@ -13,7 +13,7 @@ function Empty(props) {
       <div>
         {/* <EditModal form={<HomeEdit homeData={temp}/>} onSave={modalSave} /> */}
       </div>
-      <div>Empty</div>
+      <div></div>
     </div>
   );
 }
