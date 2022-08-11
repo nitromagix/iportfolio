@@ -25,7 +25,7 @@ function About(props) {
       <div>
         <h1>Get to Know Me!</h1>
         <EditModal form={<AboutmeEdit aboutData={aboutmeData}/>} onSave={modalSave} />
-    <Accordion defaultActiveKey={0} style={{width:"90%", margin:"0 auto"}}>
+    <Accordion defaultActiveKey={"0"} style={{width:"90%", margin:"0 auto"}}>
       <Accordion.Item eventKey="0">
         <Accordion.Header>About Me</Accordion.Header>
         <Accordion.Body>
