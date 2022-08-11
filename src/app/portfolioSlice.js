@@ -47,8 +47,6 @@ export const updatePortfolioDataThunk = (data) => {
       .then(async (response) => {
         const res = await response.json();
 
-        console.log(res);
-
         if (!response.ok) {
           const error = (res && res.message) || response.status;
           console.log(error);
