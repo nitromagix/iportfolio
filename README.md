@@ -1,3 +1,19 @@
+# Project iPortfolio
+
+iPortfolio is an app where users can make a simple starting portfolio. In this application you will be able to edit and save to the website without it being changed.
+This app truly requires more styling because its very simple when you look at it.
+We mainly focused on making the website functional. We used mostly javascript to be able to program our app. This app was made by Martin and Johnathan.
+| Path | Purpose|
+|------ |----- |
+|/     |Home page|
+|/home|Goes to Home Section|
+|/about|Goes to About Section|
+|/qualification|Goes to Qualification Section|
+|/portfolio|Goes to Portfolio Section|
+|/contact|Goes to Contact Section|
+|*      |404 page (matches any route not defined above)|
+
+
 # Getting Started with Create React App and Redux
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
