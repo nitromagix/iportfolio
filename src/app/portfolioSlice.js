@@ -43,7 +43,7 @@ export const updatePortfolioDataThunk = (data) => {
       body: JSON.stringify(portfolioData),
     };
 
-    fetch(`${API_URL}project/${portfolioData._id}`, requestOptions)
+    fetch(`${API_URL}/project/${portfolioData._id}`, requestOptions)
       .then(async (response) => {
         const res = await response.json();
 
